@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UsaDivingHelix</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="aaron_profile_img_url">http://www.usadiving.org/wp-content/uploads/2013/09/Aaron-Fleshner.jpg</string>
+    <string name="aaron_secondary_img_url">http://grfx.cstv.com/photos/schools/alab/sports/c-swim/auto_action/2060915.jpeg</string>
+    <string name="aaron_fleshner_first">Aaron</string>
+    <string name="aaron_fleshner_last">Fleshner</string>
+    <string name="aaron_fleshner_height"> 5’ 7”</string>
+    <string name="aaron_fleshner_bday">June 24,1988</string>
+    <string name="aaron_fleshner_birth_place"> Southfield, Mich.</string>
+    <string name="aaron_fleshner_home_town">Spring, Texas</string>
+    <string name="aaron_fleshner_current_residence">Tuscaloosa, Alabama</string>
+    <string name="aaron_fleshner_degree">Computer Science</string>
+    <string name="aaron_fleshner_education">University of Alabama</string>
+    <string name="aaron_fleshner_club">Alabama Diving</string>
+    <string name="aaron_fleshner_trains">Tuscaloosa, Alabama</string>
+    <string name="aaron_fleshner_coach">Pat Greenwell</string>
+    <string name="aaron_fleshner_results">https://docs.google.com/spreadsheet/pub?hl=en_US&amp;key=0Al5lxHJQQ0b3dE5ibEVQWnNGUlcyd0dpMGMwcVI4cXc&amp;hl=en_US&amp;gid=0</string>
+    <string-array name="aaron_fleshner_national_team">
+        <item>2010</item>
+        <item>2011</item>
+        <item>2013</item>
+        <item>2014</item>
+    </string-array>
+    <string name="aaron_fleshner_bio">Aaron is the son of Michael and Mary Ann Fleshner. His hobbies
+        include building websites, developing apps and spending time with his friends. A computer
+        science major, Aaron combined his love for diving and technology to develop an app that
+        calculates diving degrees of difficulty. Aaron started diving in 2002, and his favorite
+        dive is 307B. His favorite diver is Ken Terauchi (he learned his hurdle from watching him).</string>
+
+
+</resources>

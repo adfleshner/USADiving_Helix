@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo">
+        <!-- Customize your theme here. -->
+        <item name="large_text">@style/largeText</item>
+    </style>
+
+    <style name="largeText" parent="android:TextAppearance.Large">
+        <item name="android:textSize">32sp</item>
+    </style>
+
+</resources>
