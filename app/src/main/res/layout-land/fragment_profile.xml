@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88131311"
+        android:scaleType="centerCrop" />
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ivProfileDiverPic"
+        android:layout_width="175sp"
+        android:layout_height="175sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:border_color="@color/photo_crop_highlight_color"
+        app:border_width="2sp" />
+
+    <TextView
+        android:id="@+id/tvProfileDiverName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha=".75"
+        android:gravity="center"
+        android:text="name"
+        android:fontFamily="sans-serif-thin"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="32sp"
+        android:layout_toStartOf="@+id/scrollView"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/ivProfileDiverPic"
+        android:layout_toEndOf="@+id/ivProfileDiverPic"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <View
+        android:id="@+id/nameLine"
+        android:layout_width="175dp"
+        android:layout_height="1sp"
+        android:layout_below="@+id/ivProfileDiverPic"
+        android:layout_margin="8sp"
+        android:background="#9fff" />
+    <LinearLayout
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:id="@+id/llnationalTeam"
+        android:paddingRight="8sp"
+        android:paddingLeft="8sp"
+        android:paddingTop ="8sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/nameLine">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="National Team:"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvProfileDiverNationTeam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-thin"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </ScrollView>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/ivProfileDiverPic"
+        android:id="@+id/scrollView"
+        android:layout_marginStart="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/tvProfileDiverName">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llBirthday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Birthday:" />
+
+                    <TextView
+                        android:id="@+id/tvProfileDiverBirthday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-thin"
+                        android:paddingStart="4sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llBirthplace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Birthplace:" />
+
+                    <TextView
+                        android:id="@+id/tvProfileDiverBirthplace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-thin"
+                        android:paddingStart="4sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llHometown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hometown:" />
+
+                    <TextView
+                        android:id="@+id/tvProfileDiverHomeTown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-thin"
+                        android:paddingStart="4sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llResidence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Residence:" />
+
+                    <TextView
+                        android:id="@+id/tvProfileDiverCurrentRes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-thin"
+                        android:paddingStart="4sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llEducation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Education:" />
+
+                    <TextView
+                        android:id="@+id/tvProfileDiverEducation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-thin"
+                        android:paddingStart="4sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llDegree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Degree:" />
+
+                    <TextView
+                        android:id="@+id/tvProfileDiverDegree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-thin"
+                        android:paddingStart="4sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llClub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Club:" />
+
+                    <TextView
+                        android:id="@+id/tvProfileDiverClub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-thin"
+                        android:paddingStart="4sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llCoach"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Coach:" />
+
+                    <TextView
+                        android:id="@+id/tvProfileDiverCoach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-thin"
+                        android:paddingStart="4sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llBio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Biography:" />
+
+                <TextView
+                    android:id="@+id/tvBiography"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-thin"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

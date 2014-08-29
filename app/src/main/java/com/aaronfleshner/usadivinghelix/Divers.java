@@ -16,22 +16,6 @@ public class Divers {
     public Divers(Context mCxt) {
         divers = new ArrayList<DtoDiver>();
         divers.add(new DtoDiver(mCxt));
-//        String imgUrl,
-//        String firstName,
-//        String lastName,
-//        String height,
-//        String birthDate,
-//        String birthPlace,
-//        String homeTown,
-//        String currentResidence,
-//        String education,
-//        String degree,
-//        String club,
-//        String trains,
-//        String coach,
-//        ArrayList<String> nationalTeam,
-//        String biography,
-//        String results
         divers.add(new DtoDiver("http://www.usadiving.org/wp-content/uploads/2013/09/Abby-Johnston.jpg",
                 "http://image.cdnllnwnl.xosnetwork.com/pics32/800/KY/KYKDZHDXSBDNKZP.20110719151743.jpg",
                 "Abby", "Johnston", "5’ 5″", "November 16, 1989", "Columbus, Ohio", "", "", "Duke University",

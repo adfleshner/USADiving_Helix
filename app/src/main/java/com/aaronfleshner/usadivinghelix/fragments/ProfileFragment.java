@@ -51,7 +51,7 @@ public class ProfileFragment extends Fragment {
         if (getArguments().containsKey(DIVER)) {
             diver = getArguments().getParcelable(DIVER);
         }
-        mImageLoader = VolleyUtils.createSimpleImageLoader(getActivity(), 0.25f, 200);
+        mImageLoader = VolleyUtils.createSimpleImageLoader(getActivity(), 0.50f, 200);
     }
 
     @Override
