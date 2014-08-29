@@ -9,6 +9,8 @@ Profile page for all Olympic performance squad members.
 ###Playing with bluring images in the background.
 ![ProfileImage](https://raw.githubusercontent.com/adfleshner/USADiving_Helix_Res/master/aaron_profile.png)
 
+--had a couple of minutes and added landscape
+![ProfileImage](https://raw.githubusercontent.com/adfleshner/USADiving_Helix_Res/master/aaron_profile_land.png)
 
 ---------------
 The MIT License (MIT)
