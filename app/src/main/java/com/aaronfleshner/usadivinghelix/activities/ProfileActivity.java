@@ -26,15 +26,17 @@ public class ProfileActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (getActionBar() != null)
+            getActionBar().hide();
         setContentView(R.layout.activity_profile);
         Divers d = new Divers(this);
         mPager = (ViewPager) findViewById(R.id.pager);
-        mPager.setOffscreenPageLimit(3);
+        mPager.setOffscreenPageLimit(2);
         if (savedInstanceState == null) {
             divers = d.getDivers();
             mPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
             mPager.setAdapter(mPagerAdapter);
-        }else{
+        } else {
             divers = savedInstanceState.getParcelableArrayList(DIVERS);
             mPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
             mPager.setAdapter(mPagerAdapter);
@@ -47,7 +49,7 @@ public class ProfileActivity extends FragmentActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putParcelableArrayList(DIVERS,divers);
+        outState.putParcelableArrayList(DIVERS, divers);
         outState.putInt(POSITION, mPager.getCurrentItem());
     }
 

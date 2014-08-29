@@ -26,8 +26,8 @@
 
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/ivProfileDiverPic"
-            android:layout_width="175sp"
-            android:layout_height="175sp"
+            android:layout_width="175dp"
+            android:layout_height="175dp"
             app:border_color="@color/photo_crop_highlight_color"
             app:border_width="2sp" />
 
@@ -71,25 +71,28 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/ivProfileDiverPic"
             android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
             android:alpha=".75"
             android:fontFamily="sans-serif-thin"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="32sp" />
+            android:textSize="32dp" />
 
         <View
             android:id="@+id/nameLine"
             android:layout_width="match_parent"
             android:layout_height="1sp"
             android:layout_below="@id/tvProfileDiverName"
-            android:layout_margin="8sp"
+            android:layout_marginTop="8sp"
             android:background="#9fff" />
 
         <ScrollView
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/nameLine">
 
             <LinearLayout
+                android:paddingTop="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">

@@ -1,6 +1,8 @@
 package com.aaronfleshner.usadivinghelix.fragments;
 
 
+import android.app.Activity;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -34,6 +36,7 @@ public class ProfileFragment extends Fragment {
     private ImageView mBackground;
     private SimpleImageLoader mImageLoader;
     private DtoDiver diver;
+    private Bitmap bg;
 
     public static Fragment fragmentInstance(DtoDiver diver) {
         Fragment frag = new ProfileFragment();
@@ -43,15 +46,19 @@ public class ProfileFragment extends Fragment {
         return frag;
     }
 
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        mImageLoader = VolleyUtils.createSimpleImageLoader(activity, 0.50f, 200);
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        getActivity().getActionBar().hide();
         super.onCreate(savedInstanceState);
         if (getArguments().containsKey(DIVER)) {
             diver = getArguments().getParcelable(DIVER);
         }
-        mImageLoader = VolleyUtils.createSimpleImageLoader(getActivity(), 0.50f, 200);
+
     }
 
     @Override
@@ -101,17 +108,66 @@ public class ProfileFragment extends Fragment {
             tvProfileDiverCoach.setText(diver.getCoach());
             tvProfileDiverClub.setText(diver.getClub());
             tvProfileDiverNationTeam.setText(Utils.ArrayListToString(diver.getNationalTeam()));
-
-            if(diver.getBiography().isEmpty()){llProfileDiverBiography.setVisibility(View.GONE);}else{llProfileDiverBiography.setVisibility(View.VISIBLE);};
-            if(diver.getBirthDate().isEmpty()){llProfileDiverBirthday.setVisibility(View.GONE);}else{llProfileDiverBirthday.setVisibility(View.VISIBLE);};
-            if(diver.getBirthPlace().isEmpty()){llProfileDiverBirthplace.setVisibility(View.GONE);}else{llProfileDiverBirthplace.setVisibility(View.VISIBLE);};
-            if(diver.getHomeTown().isEmpty()){llProfileDiverHometown.setVisibility(View.GONE);}else{llProfileDiverHometown.setVisibility(View.VISIBLE);};
-            if(diver.getCurrentResidence().isEmpty()){llProfileDiverCurrentRes.setVisibility(View.GONE);}else{llProfileDiverCurrentRes.setVisibility(View.VISIBLE);};
-            if(diver.getDegree().isEmpty()){llProfileDiverDegree.setVisibility(View.GONE);}else{llProfileDiverDegree.setVisibility(View.VISIBLE);};
-            if(diver.getClub().isEmpty()){llProfileDiverClub.setVisibility(View.GONE);}else{llProfileDiverClub.setVisibility(View.VISIBLE);};
-            if(diver.getCoach().isEmpty()){llProfileDiverCoach.setVisibility(View.GONE);}else{llProfileDiverCoach.setVisibility(View.VISIBLE);};
-            if(diver.getEducation().isEmpty()){llProfileDiverEducation.setVisibility(View.GONE);}else{llProfileDiverEducation.setVisibility(View.VISIBLE);};
+            CheckForDiverDetailsAndHideIfNotThrere();
         }
+    }
+
+
+    private void CheckForDiverDetailsAndHideIfNotThrere() {
+        if (diver.getBiography().isEmpty()) {
+            llProfileDiverBiography.setVisibility(View.GONE);
+        } else {
+            llProfileDiverBiography.setVisibility(View.VISIBLE);
+        }
+        ;
+        if (diver.getBirthDate().isEmpty()) {
+            llProfileDiverBirthday.setVisibility(View.GONE);
+        } else {
+            llProfileDiverBirthday.setVisibility(View.VISIBLE);
+        }
+        ;
+        if (diver.getBirthPlace().isEmpty()) {
+            llProfileDiverBirthplace.setVisibility(View.GONE);
+        } else {
+            llProfileDiverBirthplace.setVisibility(View.VISIBLE);
+        }
+        ;
+        if (diver.getHomeTown().isEmpty()) {
+            llProfileDiverHometown.setVisibility(View.GONE);
+        } else {
+            llProfileDiverHometown.setVisibility(View.VISIBLE);
+        }
+        ;
+        if (diver.getCurrentResidence().isEmpty()) {
+            llProfileDiverCurrentRes.setVisibility(View.GONE);
+        } else {
+            llProfileDiverCurrentRes.setVisibility(View.VISIBLE);
+        }
+        ;
+        if (diver.getDegree().isEmpty()) {
+            llProfileDiverDegree.setVisibility(View.GONE);
+        } else {
+            llProfileDiverDegree.setVisibility(View.VISIBLE);
+        }
+        ;
+        if (diver.getClub().isEmpty()) {
+            llProfileDiverClub.setVisibility(View.GONE);
+        } else {
+            llProfileDiverClub.setVisibility(View.VISIBLE);
+        }
+        ;
+        if (diver.getCoach().isEmpty()) {
+            llProfileDiverCoach.setVisibility(View.GONE);
+        } else {
+            llProfileDiverCoach.setVisibility(View.VISIBLE);
+        }
+        ;
+        if (diver.getEducation().isEmpty()) {
+            llProfileDiverEducation.setVisibility(View.GONE);
+        } else {
+            llProfileDiverEducation.setVisibility(View.VISIBLE);
+        }
+        ;
     }
 
 
